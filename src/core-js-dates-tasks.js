@@ -92,11 +92,15 @@ function getDayName(date) {
  * Date('2024-02-16T00:00:00Z') => Date('2024-02-23T00:00:00Z')
  */
 function getNextFriday(date) {
-  const newDate = date;
-  while (newDate.getDay() !== 4) {
-    newDate.setDate(newDate.getDate() + 1);
+  const nextDate = date;
+
+  nextDate.setDate(nextDate.getDate() + 1);
+
+  while (nextDate.getDay() !== 5) {
+    nextDate.setDate(nextDate.getDate() + 1);
   }
-  return newDate;
+
+  return nextDate;
 }
 
 /**
