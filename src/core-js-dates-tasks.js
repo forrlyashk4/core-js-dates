@@ -347,7 +347,7 @@ function getWorkSchedule(period, countWorkDays, countOffDays) {
 
   let workDayCounter = 0;
   let vacationCounter = 0;
-  while (startDate.valueOf() !== endDate.valueOf()) {
+  while (startDate.valueOf() <= endDate.valueOf()) {
     if (workDayCounter !== countWorkDays) {
       const year = startDate.getFullYear();
       const month =
